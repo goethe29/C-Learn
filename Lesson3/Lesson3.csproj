@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Template.cs" />
     <Compile Include="ComplexNumbers.cs" />
     <Compile Include="Fractions.cs" />
     <Compile Include="OddNumbersSum.cs" />
