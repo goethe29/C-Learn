@@ -64,7 +64,7 @@ namespace Lesson3
         }
     }
 
-    class ComplexNumbers
+    class ComplexNumber
     {
         // The same as the struct above, but class
         class cComplex
@@ -152,8 +152,8 @@ namespace Lesson3
             Console.WriteLine("Нажмите любую букву для перехода к работе класса.");
             Console.ReadLine();
 
-            ComplexNumbers.cComplex num3 = new ComplexNumbers.cComplex(2, 2);
-            ComplexNumbers.cComplex num4 = new ComplexNumbers.cComplex(3, 3);
+            ComplexNumber.cComplex num3 = new ComplexNumber.cComplex(2, 2);
+            ComplexNumber.cComplex num4 = new ComplexNumber.cComplex(3, 3);
             Console.WriteLine($"Даны 2 числа. Число 1: {num3}, число 2: {num4}");
             Console.WriteLine(
               "Выберите, что сделать с числами:\n" +
@@ -172,19 +172,19 @@ namespace Lesson3
                 {
                     case "1":
                         {
-                            ComplexNumbers.cComplex sum2 = num3 + num4;
+                            ComplexNumber.cComplex sum2 = num3 + num4;
                             Console.WriteLine($"Сумма двух чисел: {sum2}");
                             break;
                         }
                     case "2":
                         {
-                            ComplexNumbers.cComplex diff2 = num3 - num4;
+                            ComplexNumber.cComplex diff2 = num3 - num4;
                             Console.WriteLine($"Разница двух чисел: {diff2}");
                             break;
                         }
                     case "3":
                         {
-                            ComplexNumbers.cComplex product2 = num3 * num4;
+                            ComplexNumber.cComplex product2 = num3 * num4;
                             Console.WriteLine($"Произведение двух чисел: {product2}");
                             break;
                         }

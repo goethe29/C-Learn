@@ -25,7 +25,7 @@ namespace Lesson3
             {
                 case "1":
                     {
-                        ComplexNumbers.start();
+                        ComplexNumber.start();
                         break;
                     }
                 case "2":
@@ -35,7 +35,7 @@ namespace Lesson3
                     }
                 case "3":
                     {
-                        Fractions.start();
+                        Fraction.start();
                         break;
                     }
             }
