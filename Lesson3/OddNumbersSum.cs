@@ -12,6 +12,11 @@ namespace Lesson3
     */
     class OddNumbersSum
     {    
+        /// <summary>
+        /// Caculate sum of all positive odd numbers in the list
+        /// </summary>
+        /// <param name="numbers"> List of numbers</param>
+        /// <returns></returns>
         static int sumOddNumbers(List<int> numbers) 
         {
             int sum = 0;
