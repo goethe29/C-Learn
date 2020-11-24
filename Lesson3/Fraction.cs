@@ -195,15 +195,15 @@ namespace Lesson3
 
         static public void start()
         {
-            //Console.WriteLine("Добро пожаловать в программу по работе с дробями");
-            //Fraction fraction = new Fraction(1, 2);
-            //Fraction fraction2= new Fraction(2, 4);
-            //Console.WriteLine(fraction);
-            //Console.WriteLine(fraction2);
-            //Console.WriteLine($"{fraction} + {fraction2} = {fraction + fraction2}");
-            //Console.WriteLine($"{fraction} - {fraction2} = {fraction - fraction2}");
-            //Console.WriteLine($"{fraction} * {fraction2} = {fraction * fraction2}");
-            //Console.WriteLine($"{fraction} / {fraction2} = {fraction / fraction2}");
+            Console.WriteLine("Добро пожаловать в программу по работе с дробями");
+            Fraction fraction = new Fraction(1, 2);
+            Fraction fraction2 = new Fraction(2, 4);
+            Console.WriteLine(fraction);
+            Console.WriteLine(fraction2);
+            Console.WriteLine($"{fraction} + {fraction2} = {fraction + fraction2}");
+            Console.WriteLine($"{fraction} - {fraction2} = {fraction - fraction2}");
+            Console.WriteLine($"{fraction} * {fraction2} = {fraction * fraction2}");
+            Console.WriteLine($"{fraction} / {fraction2} = {fraction / fraction2}");
 
 
             Console.WriteLine("Введите цифры, чтобы создать свою дробь.");
@@ -215,6 +215,7 @@ namespace Lesson3
             int den = int.Parse(Console.ReadLine());
 
             Fraction inFraction;
+
             // Generate Fraction from user input + check exception (no Zeros in denominators!)
 
             try
