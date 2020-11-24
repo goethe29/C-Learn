@@ -1,0 +1,7 @@
+F:\Projects\C# Learn\Lesson3\bin\Debug\Lesson3.exe.config
+F:\Projects\C# Learn\Lesson3\bin\Debug\Lesson3.exe
+F:\Projects\C# Learn\Lesson3\bin\Debug\Lesson3.pdb
+F:\Projects\C# Learn\Lesson3\obj\Debug\Lesson3.csprojAssemblyReference.cache
+F:\Projects\C# Learn\Lesson3\obj\Debug\Lesson3.csproj.CoreCompileInputs.cache
+F:\Projects\C# Learn\Lesson3\obj\Debug\Lesson3.exe
+F:\Projects\C# Learn\Lesson3\obj\Debug\Lesson3.pdb
