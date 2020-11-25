@@ -43,8 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DoubleArray.cs" />
+    <Compile Include="Authentication.cs" />
+    <Compile Include="StaticArray.cs" />
+    <Compile Include="SingleArray.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StartScreen.cs" />
+    <Compile Include="Array.cs" />
     <Compile Include="Template.cs" />
   </ItemGroup>
   <ItemGroup>
