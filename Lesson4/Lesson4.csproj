@@ -49,7 +49,7 @@
     <Compile Include="SingleArray.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StartScreen.cs" />
-    <Compile Include="Array.cs" />
+    <Compile Include="ArrayProgram.cs" />
     <Compile Include="Template.cs" />
   </ItemGroup>
   <ItemGroup>

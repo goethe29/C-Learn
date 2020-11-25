@@ -6,14 +6,16 @@ namespace Lesson4
 {
     class StartScreen
     {
-        static void Main2(string[] args)
+        static void Main(string[] args)
         {
-            Console.WriteLine("Добро пожаловать в сборник задач из Урока №X. Вам на выбор представлены:");
+            Console.WriteLine("Добро пожаловать в сборник задач из Урока №4. Вам на выбор представлены:");
             Console.WriteLine(
             "\n" +
-             "1. ...\n" +
-             "2. ...\n" +
-             "3. ...\n" +
+             "1. Задача №1\n" +
+             "2. Задача №2\n" +
+             "3. Задача №3\n" +
+             "4. Задача №4\n" +
+             "5. Задача №5\n" +
              "\n"
              );
             Console.WriteLine("Введите цифру, чтобы продолжить:");
@@ -25,7 +27,7 @@ namespace Lesson4
             {
                 case "1":
                     {
-                        Template.start();
+                        ArrayProgram.start();
                         break;
                     }
                 case "2":
@@ -34,6 +36,16 @@ namespace Lesson4
                         break;
                     }
                 case "3":
+                    {
+                        Template.start();
+                        break;
+                    }
+                case "4":
+                    {
+                        Template.start();
+                        break;
+                    }
+                case "5":
                     {
                         Template.start();
                         break;
