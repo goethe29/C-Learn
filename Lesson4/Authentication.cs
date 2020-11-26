@@ -21,6 +21,11 @@ namespace Lesson4
             string Password;
             int authenticateLimit;
 
+            /// <summary>
+            /// Constructor to create new Account and set login, password
+            /// </summary>
+            /// <param name="login"></param>
+            /// <param name="password"></param>
             public Account(string login, string password)
             {
                 this.Login = login;
@@ -28,6 +33,10 @@ namespace Lesson4
                 this.authenticateLimit = 3;
             }
 
+            /// <summary>
+            /// Method of authentication. Get Array of credentials where 0,even elements = logins, odd = passwords
+            /// </summary>
+            /// <param name="credentials"></param>
             public void Authenticate(string[] credentials) 
             {
                 bool logged = false;
@@ -61,6 +70,11 @@ namespace Lesson4
             }
         }
 
+        /// <summary>
+        /// Get credentials from file. Odd lines = logins, even = passwords
+        /// </summary>
+        /// <param name="link"></param>
+        /// <returns>Array with credentials: login, password, login, password, etc</returns>
         public static string[] getCredentials(string link)
         {
             string[] credentials = new string[0];
