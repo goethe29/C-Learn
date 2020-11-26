@@ -44,7 +44,7 @@ namespace Lesson4
 
             for (int i = 0; i < a.Length; i++) 
             {
-                a[i] = r.Next(-15, 15);
+                a[i] = r.Next(-10000, 10000);
                 Console.Write(a[i] + " ");
             }
 

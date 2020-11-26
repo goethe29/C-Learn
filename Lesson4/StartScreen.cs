@@ -32,7 +32,7 @@ namespace Lesson4
                     }
                 case "2":
                     {
-                        Template.start();
+                        StaticArray.start();
                         break;
                     }
                 case "3":
