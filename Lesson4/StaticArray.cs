@@ -48,7 +48,6 @@ namespace Lesson4
             try
             {
                 sr = new StreamReader(link);
-                sr = new StreamReader(link);
                 int n = int.Parse(sr.ReadLine());
                 int[] a = new int[n];
 

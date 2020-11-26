@@ -42,7 +42,7 @@ namespace Lesson4
                     }
                 case "4":
                     {
-                        Template.start();
+                        Authentication.start();
                         break;
                     }
                 case "5":
