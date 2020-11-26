@@ -5,3 +5,6 @@ F:\Projects\C# Learn\Lesson4\bin\Debug\Lesson4.exe
 F:\Projects\C# Learn\Lesson4\bin\Debug\Lesson4.pdb
 F:\Projects\C# Learn\Lesson4\obj\Debug\Lesson4.exe
 F:\Projects\C# Learn\Lesson4\obj\Debug\Lesson4.pdb
+F:\Projects\C# Learn\Lesson4\bin\Debug\ArrayClassLibrary.dll
+F:\Projects\C# Learn\Lesson4\bin\Debug\ArrayClassLibrary.pdb
+F:\Projects\C# Learn\Lesson4\obj\Debug\Lesson4.csproj.CopyComplete

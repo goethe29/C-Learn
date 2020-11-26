@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson4", "Lesson4.csproj", "{67BE3883-A2C7-4232-B121-8C8EEA996687}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayClassLibrary", "..\ArrayClassLibrary\ArrayClassLibrary.csproj", "{4DF58B9B-0A55-4E8F-A995-5FFAA62E8EA5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{67BE3883-A2C7-4232-B121-8C8EEA996687}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67BE3883-A2C7-4232-B121-8C8EEA996687}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67BE3883-A2C7-4232-B121-8C8EEA996687}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DF58B9B-0A55-4E8F-A995-5FFAA62E8EA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DF58B9B-0A55-4E8F-A995-5FFAA62E8EA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DF58B9B-0A55-4E8F-A995-5FFAA62E8EA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DF58B9B-0A55-4E8F-A995-5FFAA62E8EA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

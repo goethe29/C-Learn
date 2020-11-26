@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
+using ArrayClassLibrary; // My Personal Library
 
 namespace Lesson4
 {
@@ -24,7 +25,8 @@ namespace Lesson4
         int[] a;
         int length;
         int Sum;
-        int maxCount;
+        Dictionary<int, int> frequency = new Dictionary<int, int>();
+        //int maxCount;
 
         /// <summary>
         /// Generate array where n = size of array, first = 2st number, step = step for number incrementation 
@@ -42,9 +44,18 @@ namespace Lesson4
                 a[i] = next;
                 next += step;
                 Sum += a[i];
+
+                try
+                {
+                    frequency.Add(next, 1);
+                }
+                catch (ArgumentException)
+                {
+                    frequency[next] = frequency[next] + 1;
+                }
             }
             this.length = a.Length;
-            maxCount = 1; 
+            //maxCount = 1; 
             // Always = 1. BECAUSE WE HAVE ASCENDING ARRAY! EVERY NEXT NUMBER IS GREATER THAN PREVIOUS ONE. 
             // PLEASE KILL AUTHOR OF METODICHKA/Manual!
 
@@ -110,11 +121,26 @@ namespace Lesson4
             Console.WriteLine($"Сумма: {array.Sum}");
 
             SingleArray inversed = array.Inverse();
-            Console.WriteLine($"Инверсивный массив: {inversed}");
+            Console.WriteLine($"\nИнверсивный массив: {inversed}");
             Console.WriteLine($"Первый массив без изменений: {array}");
 
             array.Multi(2);
             Console.WriteLine($"Теперь умножим каждый член массива на 2: {array}");
+
+            MyArray array3 = new MyArray(10, 2, 2);
+            Console.WriteLine($"\nМассив из библиотеки: {array3}");
+
+
+            SingleArray array4 = new SingleArray(5, 1, 0);
+            Console.WriteLine($"\nВозьмем еще один массив массив: {array4}");
+            Console.WriteLine($"Частотное вхождение:");
+
+            foreach (KeyValuePair<int, int> kvp in array4.frequency)
+            {
+                Console.WriteLine("Key = {0}, Value = {1}",
+                    kvp.Key, kvp.Value);
+            }
+
 
 
             Console.ReadLine();
