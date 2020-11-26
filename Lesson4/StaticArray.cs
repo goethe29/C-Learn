@@ -114,7 +114,7 @@ namespace Lesson4
         }
 
         /// <summary>
-        /// Print regual array as string
+        /// Print regular array as string
         /// </summary>
         /// <param name="a"></param>
         /// <returns></returns>
