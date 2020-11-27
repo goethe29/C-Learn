@@ -1,0 +1,6 @@
+F:\Projects\C# Learn\ArrayClassLibrary\bin\Debug\ArrayClassLibrary.dll
+F:\Projects\C# Learn\ArrayClassLibrary\bin\Debug\ArrayClassLibrary.pdb
+F:\Projects\C# Learn\ArrayClassLibrary\obj\Debug\ArrayClassLibrary.csprojAssemblyReference.cache
+F:\Projects\C# Learn\ArrayClassLibrary\obj\Debug\ArrayClassLibrary.csproj.CoreCompileInputs.cache
+F:\Projects\C# Learn\ArrayClassLibrary\obj\Debug\ArrayClassLibrary.dll
+F:\Projects\C# Learn\ArrayClassLibrary\obj\Debug\ArrayClassLibrary.pdb
