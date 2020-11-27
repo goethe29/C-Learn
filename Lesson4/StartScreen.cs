@@ -47,7 +47,7 @@ namespace Lesson4
                     }
                 case "5":
                     {
-                        Template.start();
+                        DoubleArray.start();
                         break;
                     }
             }

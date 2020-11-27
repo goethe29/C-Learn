@@ -59,6 +59,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="2d_array.txt" />
     <Content Include="credentials.txt" />
     <Content Include="data.txt" />
   </ItemGroup>
