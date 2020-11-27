@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MyArray2D.cs" />
     <Compile Include="MyArray.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
