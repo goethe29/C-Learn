@@ -10,6 +10,7 @@ namespace ArrayClassLibrary
     public class MyArray2D
     {
         int[,] a2;
+        public string maxIndex;
 
         /// <summary>
         /// Generate array with lines and columnts set, filled by random numbers from min to max
@@ -140,7 +141,28 @@ namespace ArrayClassLibrary
                         }
                     }
                 }
+                indexOf(max, out maxIndex); // Find Index of Max number
                 return max;
+            }
+        }
+
+        /// <summary>
+        /// Find Key in Array and return it index
+        /// </summary>
+        /// <param name="key">What to search</param>
+        /// <param name="index">Where to return index</param>
+        public void indexOf(int key, out string index) 
+        {
+            index = "-1. -1";
+            for (int i = 0; i < a2.GetLength(0); i++)
+            {
+                for (int j = 0; j < a2.GetLength(1); j++)
+                {
+                    if (a2[i, j] == key)
+                    {
+                        index = i + ", " + j;
+                    }
+                }
             }
         }
 

@@ -31,6 +31,7 @@ namespace Lesson4
             Console.WriteLine(a2);
             Console.WriteLine($"Минимальное число: {a2.min}");
             Console.WriteLine($"Максимальное число: {a2.max}");
+            Console.WriteLine($"Индекс максимального числа: {a2.maxIndex}");
 
             int sum = a2.Sum();
             Console.WriteLine($"Сумма всех его членов: {sum}");
