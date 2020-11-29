@@ -121,11 +121,17 @@ namespace Lesson5
             return result;
         }
 
-        static Dictionary<string, int> CalculateFrequency(string[] words, string text) 
+        /// <summary>
+        /// Generates Dictionary<string, int> for string[] "keys" based on the frequency of appearing in the "text" 
+        /// </summary>
+        /// <param name="keys"></param>
+        /// <param name="text"></param>
+        /// <returns></returns>
+        static Dictionary<string, int> CalculateFrequency(string[] keys, string text) 
         {
             Dictionary<string, int> frequency = new Dictionary<string, int>();
             
-            foreach (string str in words)
+            foreach (string str in keys)
             {
                 try
                 {
@@ -145,6 +151,11 @@ namespace Lesson5
             return frequency;
         }
 
+        /// <summary>
+        /// Generate string from string[] to use in output (e.g Console)
+        /// </summary>
+        /// <param name="words"></param>
+        /// <returns></returns>
         static string Print(string[] words) 
         {
             string result = "";
@@ -155,6 +166,11 @@ namespace Lesson5
             return result;
         }
 
+        /// <summary>
+        /// Generate string from Dictionary<string, int> to use in output (e.g Console)
+        /// </summary>
+        /// <param name="myDictionary"></param>
+        /// <returns></returns>
         static string Print(Dictionary<string, int> myDictionary)
         {
             string result = "";
