@@ -41,7 +41,9 @@ namespace Lesson5
                 this.valid = true;
                 char[] chars = this.login.ToCharArray();
 
-                if (Char.IsNumber(chars[0]) || chars.Length < 2 || chars.Length > 8) 
+                if (Char.IsNumber(chars[0]) || 
+                    chars.Length < 2 || 
+                    chars.Length > 8) 
                 {
                     this.valid = false;
                     return this.valid;
