@@ -108,14 +108,63 @@ namespace Lesson5
         {
             StringBuilder result = new StringBuilder();
 
-            for (int i = 0; i < n; i++) 
+            for (int i = 1; i <= n; i++) 
             {
+                if (original == "")
+                {
+                    break;
+                }
                 string longestWord = LongestWord(original);
                 result.Append($"{longestWord} ");
                 original = original.Replace(longestWord, "");
             }
             return result;
         }
+
+        static Dictionary<string, int> CalculateFrequency(string[] words, string text) 
+        {
+            Dictionary<string, int> frequency = new Dictionary<string, int>();
+            
+            foreach (string str in words)
+            {
+                try
+                {
+                    frequency.Add(str, 0);
+                }
+                catch (ArgumentException)
+                {
+                    // do nothing
+                }
+
+                while (text.Contains(str))
+                {
+                    frequency[str] = frequency[str] + 1;
+                    text = text.Remove(text.IndexOf(str), str.Length);
+                }
+            }
+            return frequency;
+        }
+
+        static string Print(string[] words) 
+        {
+            string result = "";
+            foreach (string str in words)
+            {
+                result += str + " ";
+            }
+            return result;
+        }
+
+        static string Print(Dictionary<string, int> myDictionary)
+        {
+            string result = "";
+            foreach (KeyValuePair<string, int> kvp in myDictionary)
+            {
+                result += ($"\nKey = {kvp.Key}, Frequency = {kvp.Value}");
+            }
+            return result;
+        }
+
         static public void start()
         {
             Console.WriteLine("Добро пожаловать в программу.");
@@ -134,6 +183,15 @@ namespace Lesson5
 
             int k = 3;
             Console.WriteLine($"Строка из {k} самых длинных слов предложения: {LongestWordsMessage(input1, k)}");
+
+            
+            Console.WriteLine("\nА теперь протестируем частотный Dictionary.");
+            string[] keys = { "стол", "кот", "книга", "кот" };
+            Console.WriteLine($"Даны следующие ключи: {Print(keys)}");
+            Console.WriteLine("Введите любой текст и нажмите Enter:");
+            string input2 = Console.ReadLine();
+            Dictionary<string, int> wordFrequency = CalculateFrequency(keys, input2); 
+            Console.WriteLine($"\nЧастотное вхождение: {Print(wordFrequency)}");
 
             Console.ReadLine();
         }
