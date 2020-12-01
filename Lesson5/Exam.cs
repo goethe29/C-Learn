@@ -49,7 +49,7 @@ namespace Lesson5
         public int defaultPrintNum = 3;
 
         /// <summary>
-        /// Reads file (where 2st line - N of students, other lines - LastName FirstName int int int) and generate Student Array 
+        /// Reads file (where 1st line - N of students, other lines - LastName FirstName int int int) and generate Student Array 
         /// </summary>
         /// <param name="link"></param>
         /// <returns></returns>
