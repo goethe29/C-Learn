@@ -57,7 +57,7 @@ namespace Lesson5
 
         static public void start()
         {
-            Console.WriteLine("Добро пожаловать в программу ...");
+            Console.WriteLine("Добро пожаловать в программу.");
 
             Console.WriteLine("Введите первую строку:");
             string text1 = Console.ReadLine();
