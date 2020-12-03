@@ -6,7 +6,7 @@ namespace Lesson6
 {
     class StartScreen
     {
-        static void Main2(string[] args)
+        static void Main(string[] args)
         {
             Console.WriteLine("Добро пожаловать в сборник задач из Урока №X. Вам на выбор представлены:");
             Console.WriteLine(
