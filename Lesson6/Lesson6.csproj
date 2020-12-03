@@ -46,7 +46,10 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StartScreen.cs" />
-    <Compile Include="Template.cs" />
+    <Compile Include="Task2.cs" />
+    <Compile Include="Task4.cs" />
+    <Compile Include="Task3.cs" />
+    <Compile Include="Task1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
