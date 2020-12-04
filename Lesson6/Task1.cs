@@ -9,6 +9,7 @@ namespace Lesson6
     */
 
     public delegate double Func(double x, double a);
+
     /// <summary>
     /// Изменить программу вывода таблицы функции так, чтобы можно было передавать функции типа double (double, double). 
     /// Продемонстрировать работу на функции с функцией a*x^2 и функцией a*sin(x).
