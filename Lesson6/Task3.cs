@@ -43,13 +43,34 @@ namespace Lesson6
     /// в) отсортировать список по возрасту студента;
     /// г) * отсортировать список по курсу и возрасту студента;
     /// </summary>
-    class Task3
+    static class Task3
     {
         static int SortByFirstName(Student st1, Student st2)
         {
             return String.Compare(st1.firstName, st2.firstName);
         }
 
+        static int SortByAge(Student st1, Student st2)
+        {
+            if (st1.age == st2.age)
+            {
+                return 0;
+            }
+            else if (st1.age > st2.age)
+            {
+                return 1;
+            }
+            else
+                return -1; 
+        }
+
+
+        /// <summary>
+        /// Counts numbers of student on the bachelor/master courses
+        /// </summary>
+        /// <param name="students"> List of students</param>
+        /// <param name="type">Type "master" to count masters or "bachelor" to count bachelors</param>
+        /// <returns></returns> 
         static int CourseCount(List<Student> students, string type) 
         {
             int count = 0;
@@ -65,6 +86,13 @@ namespace Lesson6
             return count;
         }
 
+        /// <summary>
+        /// Counts numbers of student with age >= min && age <= max on the all courses
+        /// </summary>
+        /// <param name="students"></param>
+        /// <param name="minAge"></param>
+        /// <param name="maxAge"></param>
+        /// <returns>Dictionary<int, int>: Course Num, Students Qty</int>></returns>
         static Dictionary<int, int> CoursesStatistic(List<Student> students, int minAge, int maxAge)
         {
             Dictionary<int, int> courses = new Dictionary<int, int>();
@@ -84,16 +112,39 @@ namespace Lesson6
             return courses;
         }
 
+        /// <summary>
+        /// Generate string from Dictionary with every key-value pair on the new line: $"Курс: {kvp.Key}. Количество человек: {kvp.Value}\n"
+        /// </summary>
+        /// <param name="dict"></param>
+        /// <returns></returns>
         static string PrintDictionary(Dictionary<int, int> dict) 
         {
             string result = "";
             foreach (var kvp in dict)
             {
-                result += $"\n Курс: {kvp.Key}. Количество человек: {kvp.Value}";
+                result += $"Курс: {kvp.Key}. Количество человек: {kvp.Value}\n";
             }
             return result;
         }
 
+        /// <summary>
+        /// Prints Students List to console as: "FirstName LastName, age"
+        /// </summary>
+        /// <param name="list"></param>
+        public static void Print(this List<Student> list) 
+        {
+            foreach (var v in list)
+            {
+                Console.WriteLine($"{v.firstName} {v.lastName}, {v.age}");
+            }
+        }
+        
+        /// <summary>
+        /// Loads students from the prepared csv and saves to the List
+        /// </summary>
+        /// <param name="file"></param>
+        /// <param name="exception">Error message if exception caught</param>
+        /// <returns></returns>
         static List<Student> LoadStudents(string file, out string exception) 
         {
             exception = "";
@@ -116,11 +167,11 @@ namespace Lesson6
             return list;
         }
 
-
         static public void start()
         {
             Console.WriteLine("Добро пожаловать в программу ...");
 
+            // Load data
             string exception;
             List<Student> list = LoadStudents("students_6.csv",out exception);
 
@@ -131,22 +182,29 @@ namespace Lesson6
                 return; 
             }
 
-            
+            // Sort by First Name and print total count of students
             list.Sort(new Comparison<Student>(SortByFirstName));
             Console.WriteLine("Всего студентов:" + list.Count);
 
+            // Count masters/bachelors
             int master = CourseCount(list, "master");
             int bachelor = CourseCount(list, "bachelor");
             Console.WriteLine("Магистров:{0}", master);
             Console.WriteLine("Бакалавров:{0}", bachelor);
-            //foreach (var v in list) Console.WriteLine(v.firstName);
 
+            // Print Students list
+            Console.WriteLine("\nСписок всех студентов:\n");
+            list.Print();
+
+            // Print Courses Statistic 
+            Console.WriteLine("\nСтатистика по курсам:");
             Dictionary<int, int> courses = CoursesStatistic(list, 18, 20);
             Console.WriteLine(PrintDictionary(courses));
-            
 
-
-
+            // Print students sorted by age
+            Console.WriteLine("\nСписок всех студентов отсортированный по возрасту:\n");
+            list.Sort(SortByAge);
+            list.Print();
 
             Console.ReadLine();
         }
