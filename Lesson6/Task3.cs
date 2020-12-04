@@ -45,11 +45,23 @@ namespace Lesson6
     /// </summary>
     static class Task3
     {
+        /// <summary>
+        /// Sorts Students by First Name
+        /// </summary>
+        /// <param name="st1"></param>
+        /// <param name="st2"></param>
+        /// <returns></returns>
         static int SortByFirstName(Student st1, Student st2)
         {
             return String.Compare(st1.firstName, st2.firstName);
         }
 
+        /// <summary>
+        /// Sorts Students by Age
+        /// </summary>
+        /// <param name="st1"></param>
+        /// <param name="st2"></param>
+        /// <returns></returns>
         static int SortByAge(Student st1, Student st2)
         {
             if (st1.age == st2.age)
@@ -62,6 +74,26 @@ namespace Lesson6
             }
             else
                 return -1; 
+        }
+
+        /// <summary>
+        /// Sorts Students by Course, then by Age in the frame of 1 course
+        /// </summary>
+        /// <param name="st1"></param>
+        /// <param name="st2"></param>
+        /// <returns></returns>
+        static int SortByCourseAge(Student st1, Student st2)
+        {
+            if (st1.course == st2.course)
+            {
+                return SortByAge(st1, st2);
+            }
+            else if (st1.course > st2.course)
+            {
+                return 1;
+            }
+            else
+                return -1;
         }
 
 
@@ -113,7 +145,7 @@ namespace Lesson6
         }
 
         /// <summary>
-        /// Generate string from Dictionary with every key-value pair on the new line: $"Курс: {kvp.Key}. Количество человек: {kvp.Value}\n"
+        /// Generate string from Dictionary with every key-value pair on the new line: "Курс: i. Количество человек: n"
         /// </summary>
         /// <param name="dict"></param>
         /// <returns></returns>
@@ -128,14 +160,14 @@ namespace Lesson6
         }
 
         /// <summary>
-        /// Prints Students List to console as: "FirstName LastName, age"
+        /// Prints Students List to console as: "FirstName LastName, age. Курс: сourse"
         /// </summary>
         /// <param name="list"></param>
         public static void Print(this List<Student> list) 
         {
             foreach (var v in list)
             {
-                Console.WriteLine($"{v.firstName} {v.lastName}, {v.age}");
+                Console.WriteLine($"{v.firstName} {v.lastName}, {v.age}. Курс: {v.course}");
             }
         }
         
@@ -204,6 +236,11 @@ namespace Lesson6
             // Print students sorted by age
             Console.WriteLine("\nСписок всех студентов отсортированный по возрасту:\n");
             list.Sort(SortByAge);
+            list.Print();
+
+            // Print students sorted by course and age
+            Console.WriteLine("\nСписок всех студентов отсортированный по курсу и возрасту:\n");
+            list.Sort(SortByCourseAge);
             list.Print();
 
             Console.ReadLine();
