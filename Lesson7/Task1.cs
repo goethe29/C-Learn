@@ -28,7 +28,7 @@ namespace Lesson7
             steps = new List<int>();
             commands = 0;
             Random r = new Random();
-            targetNum = r.Next(2,10);
+            targetNum = r.Next(2,1000);
             win = false;
         }
 
