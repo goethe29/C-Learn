@@ -1,7 +1,7 @@
 ﻿
 namespace Lesson7
 {
-    partial class Form1
+    partial class Task1Game
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -33,6 +33,11 @@ namespace Lesson7
             this.btnCommand2 = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.lblNumber = new System.Windows.Forms.Label();
+            this.Cancel = new System.Windows.Forms.Button();
+            this.commands = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.targetNumLabel = new System.Windows.Forms.Label();
+            this.targetNum = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCommand1
@@ -74,17 +79,70 @@ namespace Lesson7
             this.lblNumber.TabIndex = 3;
             this.lblNumber.Text = "0";
             // 
-            // Form1
+            // Cancel
+            // 
+            this.Cancel.Location = new System.Drawing.Point(23, 180);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(90, 23);
+            this.Cancel.TabIndex = 4;
+            this.Cancel.Text = "Отменить";
+            this.Cancel.UseVisualStyleBackColor = true;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
+            // 
+            // commands
+            // 
+            this.commands.AutoSize = true;
+            this.commands.Location = new System.Drawing.Point(287, 180);
+            this.commands.Name = "commands";
+            this.commands.Size = new System.Drawing.Size(16, 17);
+            this.commands.TabIndex = 5;
+            this.commands.Text = "0";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(139, 180);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(142, 17);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Количество команд:";
+            // 
+            // targetNumLabel
+            // 
+            this.targetNumLabel.AutoSize = true;
+            this.targetNumLabel.Location = new System.Drawing.Point(6, 13);
+            this.targetNumLabel.Name = "targetNumLabel";
+            this.targetNumLabel.Size = new System.Drawing.Size(201, 17);
+            this.targetNumLabel.TabIndex = 7;
+            this.targetNumLabel.Text = "Необходимо получить число:";
+            // 
+            // targetNum
+            // 
+            this.targetNum.AutoSize = true;
+            this.targetNum.Location = new System.Drawing.Point(228, 12);
+            this.targetNum.Name = "targetNum";
+            this.targetNum.Size = new System.Drawing.Size(16, 17);
+            this.targetNum.TabIndex = 8;
+            this.targetNum.Text = "0";
+            // 
+            // Task1Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(338, 241);
+            this.Controls.Add(this.targetNum);
+            this.Controls.Add(this.targetNumLabel);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.commands);
+            this.Controls.Add(this.Cancel);
             this.Controls.Add(this.lblNumber);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnCommand2);
             this.Controls.Add(this.btnCommand1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Task1Game";
+            this.Text = "Task 1: Game";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Task1Game_FormClosing);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -96,6 +154,11 @@ namespace Lesson7
         private System.Windows.Forms.Button btnCommand2;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Label lblNumber;
+        private System.Windows.Forms.Button Cancel;
+        private System.Windows.Forms.Label commands;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label targetNumLabel;
+        private System.Windows.Forms.Label targetNum;
     }
 }
 

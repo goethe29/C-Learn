@@ -7,4 +7,5 @@ F:\Projects\C# Learn\Lesson7\obj\Debug\Lesson7.csproj.GenerateResource.cache
 F:\Projects\C# Learn\Lesson7\obj\Debug\Lesson7.csproj.CoreCompileInputs.cache
 F:\Projects\C# Learn\Lesson7\obj\Debug\Lesson7.exe
 F:\Projects\C# Learn\Lesson7\obj\Debug\Lesson7.pdb
-F:\Projects\C# Learn\Lesson7\obj\Debug\Lesson7.Form1.resources
+F:\Projects\C# Learn\Lesson7\obj\Debug\Lesson7.Task1Game.resources
+F:\Projects\C# Learn\Lesson7\obj\Debug\Lesson7.Task1Menu.resources

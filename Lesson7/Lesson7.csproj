@@ -49,16 +49,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Task1Game.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Task1Game.Designer.cs">
+      <DependentUpon>Task1Game.cs</DependentUpon>
     </Compile>
     <Compile Include="Task1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Task1Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Task1Menu.Designer.cs">
+      <DependentUpon>Task1Menu.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Task1Game.resx">
+      <DependentUpon>Task1Game.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -69,6 +75,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Task1Menu.resx">
+      <DependentUpon>Task1Menu.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
