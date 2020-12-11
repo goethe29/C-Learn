@@ -64,7 +64,7 @@ namespace Lesson7
 
         private void CountCommands()
         {
-            commands.Text = (int.Parse(commands.Text) + 2).ToString();
+            commands.Text = (int.Parse(commands.Text) + 1).ToString();
         }
 
         private void Task1Game_FormClosing(object sender, FormClosingEventArgs e)
