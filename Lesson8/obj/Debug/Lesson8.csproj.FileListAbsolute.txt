@@ -7,3 +7,4 @@ F:\Projects\C# Learn\Lesson8\obj\Debug\Lesson8.exe
 F:\Projects\C# Learn\Lesson8\obj\Debug\Lesson8.pdb
 F:\Projects\C# Learn\Lesson8\obj\Debug\Lesson8.Form1.resources
 F:\Projects\C# Learn\Lesson8\obj\Debug\Lesson8.csproj.GenerateResource.cache
+F:\Projects\C# Learn\Lesson8\obj\Debug\Lesson8.Task2.resources

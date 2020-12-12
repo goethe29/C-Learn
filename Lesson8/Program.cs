@@ -33,6 +33,9 @@ namespace Lesson8
                     Task1.DateTimeReflection();
                     break;
                 case "2":
+                    Application.EnableVisualStyles();
+                    Application.SetCompatibleTextRenderingDefault(false);
+                    Application.Run(new Task2());
                     break;
                 case "3":
                     break;
