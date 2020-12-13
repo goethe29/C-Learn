@@ -1,7 +1,7 @@
 ﻿
 namespace Lesson8
 {
-    partial class Form1
+    partial class Task3
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Lesson8
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Task3));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.miNew = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,6 +43,9 @@ namespace Lesson8
             this.btnSaveQuest = new System.Windows.Forms.Button();
             this.nudNumber = new System.Windows.Forms.NumericUpDown();
             this.cboxTrue = new System.Windows.Forms.CheckBox();
+            this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.aboutProgramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudNumber)).BeginInit();
             this.SuspendLayout();
@@ -51,10 +54,11 @@ namespace Lesson8
             // 
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripDropDownButton1});
+            this.toolStripDropDownButton1,
+            this.toolStripDropDownButton2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(570, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(570, 31);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -65,12 +69,13 @@ namespace Lesson8
             this.miNew,
             this.miOpen,
             this.miSave,
+            this.saveAsToolStripMenuItem,
             this.toolStripSeparator1,
             this.miExit});
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(46, 24);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(46, 28);
             this.toolStripDropDownButton1.Text = "File";
             // 
             // miNew
@@ -108,6 +113,7 @@ namespace Lesson8
             // 
             // tboxQuestion
             // 
+            this.tboxQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.tboxQuestion.Location = new System.Drawing.Point(0, 30);
             this.tboxQuestion.Multiline = true;
             this.tboxQuestion.Name = "tboxQuestion";
@@ -126,27 +132,29 @@ namespace Lesson8
             // 
             // btnDelete
             // 
+            this.btnDelete.BackColor = System.Drawing.Color.Red;
             this.btnDelete.Location = new System.Drawing.Point(141, 207);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(96, 30);
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSaveQuest
             // 
+            this.btnSaveQuest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnSaveQuest.Location = new System.Drawing.Point(255, 207);
             this.btnSaveQuest.Name = "btnSaveQuest";
-            this.btnSaveQuest.Size = new System.Drawing.Size(96, 30);
+            this.btnSaveQuest.Size = new System.Drawing.Size(122, 30);
             this.btnSaveQuest.TabIndex = 4;
-            this.btnSaveQuest.Text = "Save";
-            this.btnSaveQuest.UseVisualStyleBackColor = true;
+            this.btnSaveQuest.Text = "Save Question";
+            this.btnSaveQuest.UseVisualStyleBackColor = false;
             this.btnSaveQuest.Click += new System.EventHandler(this.btnSaveQuest_Click);
             // 
             // nudNumber
             // 
-            this.nudNumber.Location = new System.Drawing.Point(391, 207);
+            this.nudNumber.Location = new System.Drawing.Point(419, 207);
             this.nudNumber.Name = "nudNumber";
             this.nudNumber.Size = new System.Drawing.Size(52, 22);
             this.nudNumber.TabIndex = 5;
@@ -155,14 +163,39 @@ namespace Lesson8
             // cboxTrue
             // 
             this.cboxTrue.AutoSize = true;
-            this.cboxTrue.Location = new System.Drawing.Point(461, 207);
+            this.cboxTrue.Location = new System.Drawing.Point(496, 207);
             this.cboxTrue.Name = "cboxTrue";
             this.cboxTrue.Size = new System.Drawing.Size(60, 21);
             this.cboxTrue.TabIndex = 6;
             this.cboxTrue.Text = "True";
             this.cboxTrue.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // toolStripDropDownButton2
+            // 
+            this.toolStripDropDownButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutProgramToolStripMenuItem});
+            this.toolStripDropDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton2.Image")));
+            this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
+            this.toolStripDropDownButton2.Size = new System.Drawing.Size(55, 28);
+            this.toolStripDropDownButton2.Text = "Help";
+            // 
+            // aboutProgramToolStripMenuItem
+            // 
+            this.aboutProgramToolStripMenuItem.Name = "aboutProgramToolStripMenuItem";
+            this.aboutProgramToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.aboutProgramToolStripMenuItem.Text = "About Program";
+            this.aboutProgramToolStripMenuItem.Click += new System.EventHandler(this.aboutProgramToolStripMenuItem_Click);
+            // 
+            // saveAsToolStripMenuItem
+            // 
+            this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.saveAsToolStripMenuItem.Text = "Save As";
+            this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.miSaveAs_Click);
+            // 
+            // Task3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -174,7 +207,7 @@ namespace Lesson8
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.tboxQuestion);
             this.Controls.Add(this.toolStrip1);
-            this.Name = "Form1";
+            this.Name = "Task3";
             this.Text = "Form1";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -199,5 +232,8 @@ namespace Lesson8
         private System.Windows.Forms.Button btnSaveQuest;
         private System.Windows.Forms.NumericUpDown nudNumber;
         private System.Windows.Forms.CheckBox cboxTrue;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
+        private System.Windows.Forms.ToolStripMenuItem aboutProgramToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
     }
 }

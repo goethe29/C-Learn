@@ -25,7 +25,8 @@ namespace Lesson8
     // Класс для хранения списка вопросов. А также для сериализации в XML и десериализации из XML
     class TrueFalse
     {
-        string fileName;
+        public bool isSaved;
+        public string fileName;
         List<Question> list;
         public string FileName
         {
@@ -35,6 +36,7 @@ namespace Lesson8
         {
             this.fileName = fileName;
             list = new List<Question>();
+            isSaved = true; 
         }
         public void Add(string text, bool trueFalse)
         {
