@@ -12,6 +12,10 @@ namespace Lesson8
 {
     public partial class Task2 : Form
     {
+        /// <summary>
+        /// Создайте простую форму на котором свяжите свойство Text элемента TextBox 
+        ///     со свойством Value элемента NumericUpDown
+        /// </summary>
         public Task2()
         {
             InitializeComponent();

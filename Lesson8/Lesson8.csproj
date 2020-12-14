@@ -56,12 +56,19 @@
     </Compile>
     <Compile Include="Task1.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Task4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Task4.Designer.cs">
+      <DependentUpon>Task4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Task3.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Task3.Designer.cs">
       <DependentUpon>Task3.cs</DependentUpon>
     </Compile>
+    <Compile Include="LearnEnglish.cs" />
     <Compile Include="TrueFalse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -69,6 +76,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Task4.resx">
+      <DependentUpon>Task4.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Task3.resx">
       <DependentUpon>Task3.cs</DependentUpon>
     </EmbeddedResource>

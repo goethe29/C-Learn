@@ -7,11 +7,11 @@ using System.Reflection;
 
 namespace Lesson8
 {
-    /// <summary>
-    /// С помощью рефлексии выведите все свойства структуры DateTime
-    /// </summary>
     class Task1
     {
+        /// <summary>
+        /// С помощью рефлексии выведите все свойства структуры DateTime
+        /// </summary>
         static public void DateTimeReflection()
         {
             Console.WriteLine("Ниже представлена рефлексия всех свойств структуры DateTime\n");

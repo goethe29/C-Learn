@@ -37,6 +37,9 @@ namespace Lesson8
                     Application.Run(new Task3());
                     break;
                 case "4":
+                    Application.EnableVisualStyles();
+                    Application.SetCompatibleTextRenderingDefault(false);
+                    Application.Run(new Task4());
                     break;
                 case "5":
                     break;

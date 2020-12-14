@@ -12,12 +12,12 @@ using System.Text.RegularExpressions;
 
 namespace Lesson8
 {
-    public partial class Task3 : Form
+    public partial class Task4 : Form
     {
         Regex regex = new Regex($"[\\w.\\s]*$");
 
         // База данных с вопросами
-        TrueFalse database;
+        LearnEnglish database;
 
         // Проверяет наличие базы
         private bool ValidateDB() 
@@ -46,18 +46,11 @@ namespace Lesson8
         }
 
         /// <summary>
-        /// а) Создать приложение, показанное на уроке, 
-        ///     добавив в него защиту от возможных ошибок
-        ///     (не создана база данных,
-        ///     обращение к несуществующему вопросу, открытие слишком большого файла и т.д.).
-        /// б) Изменить интерфейс программы, увеличив шрифт, поменяв цвет элементов
-        ///     и добавив другие «косметические» улучшения на свое усмотрение.
-        /// в) Добавить в приложение меню «О программе» с информацией о программе
-        ///     (автор, версия, авторские права и др.).
-        /// г)* Добавить пункт меню Save As, в котором можно выбрать имя для сохранения базы данных
-        ///     (элемент SaveFileDialog).
+        /// *Используя полученные знания и класс TrueFalse в качестве шаблона, 
+        ///     разработать собственную утилиту хранения данных 
+        ///     (Например: Дни рождения, Траты, Напоминалка, Английские слова и другие).
         /// </summary>
-        public Task3()
+        public Task4()
         {
             InitializeComponent();
         }
@@ -68,8 +61,8 @@ namespace Lesson8
             SaveFileDialog sfd = new SaveFileDialog();
             if (sfd.ShowDialog() == DialogResult.OK)
             {
-                database = new TrueFalse(sfd.FileName);
-                database.Add("123", true);
+                database = new LearnEnglish(sfd.FileName);
+                database.Add("Пример", "Example");
                 database.Save();
                 nudNumber.Minimum = 1;
                 nudNumber.Maximum = 1;
@@ -107,7 +100,7 @@ namespace Lesson8
             OpenFileDialog ofd = new OpenFileDialog();
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                database = new TrueFalse(ofd.FileName);
+                database = new LearnEnglish(ofd.FileName);
                 database.Load();
                 nudNumber.Minimum = 1;
                 nudNumber.Maximum = database.Count;
@@ -131,7 +124,7 @@ namespace Lesson8
             } 
             else
             {
-                database.Add((database.Count + 1).ToString(), true);
+                database.Add($"Пример {(database.Count + 1).ToString()}", "Translation");
                 nudNumber.Maximum = database.Count;
                 nudNumber.Value = database.Count;
                 CheckStatus("updated");
@@ -139,7 +132,7 @@ namespace Lesson8
         }
 
         // Обработчик кнопки Сохранить (вопрос)
-        private void btnSaveQuest_Click(object sender, EventArgs e)
+        private void btnSaveCard_Click(object sender, EventArgs e)
         {
             if (ValidateDB() == false)
             {
@@ -147,8 +140,8 @@ namespace Lesson8
             }
             else
             {
-                database[(int)nudNumber.Value - 1].text = tboxQuestion.Text;
-                database[(int)nudNumber.Value - 1].trueFalse = cboxTrue.Checked;
+                database[(int)nudNumber.Value - 1].russian = tboxRussian.Text;
+                database[(int)nudNumber.Value - 1].english = tboxEnglish.Text;
                 CheckStatus("updated");
             }
         }
@@ -165,9 +158,8 @@ namespace Lesson8
                 if (nudNumber.Maximum == 1 || database == null) return;
                 database.Remove((int)nudNumber.Value-1);
                 nudNumber.Maximum--;
-                /*Фиксит отображение нового текста вопроса, при удалении текущего вопроса
-                Методичка содержала код с багом.*/
-                tboxQuestion.Text = database[(int)nudNumber.Value - 1].text;
+                tboxRussian.Text = database[(int)nudNumber.Value - 1].russian;
+                tboxEnglish.Text = database[(int)nudNumber.Value - 1].english;
                 CheckStatus("updated");
             }
         }
@@ -181,14 +173,14 @@ namespace Lesson8
             }
             else
             {
-                tboxQuestion.Text = database[(int)nudNumber.Value - 1].text;
-                cboxTrue.Checked = database[(int)nudNumber.Value - 1].trueFalse;
+                tboxRussian.Text = database[(int)nudNumber.Value - 1].russian;
+                tboxEnglish.Text = database[(int)nudNumber.Value - 1].english;
             }
         }
 
         private void aboutProgramToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Программа хранит базу данных TrueFalse вопросов.\n (с) Дмитрий Юдин \n 2020 ");
+            MessageBox.Show("Программа хранит базу данных LearnEnglish карточек.\n (с) Дмитрий Юдин \n 2020 ");
         }
     }
 }

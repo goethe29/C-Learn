@@ -8,3 +8,4 @@ F:\Projects\C# Learn\Lesson8\obj\Debug\Lesson8.pdb
 F:\Projects\C# Learn\Lesson8\obj\Debug\Lesson8.csproj.GenerateResource.cache
 F:\Projects\C# Learn\Lesson8\obj\Debug\Lesson8.Task2.resources
 F:\Projects\C# Learn\Lesson8\obj\Debug\Lesson8.Task3.resources
+F:\Projects\C# Learn\Lesson8\obj\Debug\Lesson8.Task4.resources
