@@ -48,6 +48,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Task5.cs" />
+    <Compile Include="Student.cs" />
     <Compile Include="Task2.cs">
       <SubType>Form</SubType>
     </Compile>

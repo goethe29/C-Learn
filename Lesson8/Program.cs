@@ -42,6 +42,7 @@ namespace Lesson8
                     Application.Run(new Task4());
                     break;
                 case "5":
+                    Task5.start();
                     break;
                 default:
                     break;
